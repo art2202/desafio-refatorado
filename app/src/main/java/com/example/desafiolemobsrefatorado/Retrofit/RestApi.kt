@@ -20,6 +20,5 @@ object RestApi {
             .addConverterFactory(MoshiConverterFactory.create())
             .addCallAdapterFactory(CoroutineCallAdapterFactory())
             .build()
-
     }
 }
