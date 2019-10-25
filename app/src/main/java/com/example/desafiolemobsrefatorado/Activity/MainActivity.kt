@@ -16,13 +16,13 @@ import kotlinx.coroutines.*
 
 class MainActivity : AppCompatActivity() {
 
-    var model :MyViewModel]?
+//    var model :MyViewModel]?
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val repository: LivroRepository = LivroRepository(RestApi.getLivroService())
-        var livros : List<Livro> = listOf()
+        var livros : List<Livro>
 
         CoroutineScope(Dispatchers.IO).launch {
             livros = repository.getListaLivro()
